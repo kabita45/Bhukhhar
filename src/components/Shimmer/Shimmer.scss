@@ -1,0 +1,25 @@
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px;
+  padding: 18px 50px;
+  background: var(--background-color);
+  transition: 0.3s;
+  animation: fadeIn 1s;
+
+
+  .shimmer-cards {
+    .shimmer {
+      background: linear-gradient(to right,
+          var(--shimmer-background-primary) 8%,
+          var(--shimmer-background-secondary) 18%,
+          var(--shimmer-background-primary) 33%);
+      background-size: 1000px 100%;
+      animation: shimmer 2.2s linear infinite forwards;
+    }
+
+    .shimmer-title {
+      width: 15rem;
+    }
+  }
+}
